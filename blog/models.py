@@ -41,6 +41,9 @@ class Tag(models.Model):
 	def __str__(self):
 		return f'{self.title}'
 
+	def get_absolute_url(self):
+		return reverse('posts_by_tag', kwargs={'slug': self.slug})
+
 	class Meta:
 		ordering = ('title',)
 
