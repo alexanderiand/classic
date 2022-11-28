@@ -65,3 +65,17 @@ class PostView(DetailView):
 		context['post'] = post
 		context['tags'] = post.tags.all()
 		return context
+
+class TagView(ListView):
+	model = Tag
+	template_name = 'tag.html'
+	context_object_name = 'posts'
+	allow_empty = False
+	paginate_by = 1
+
+	def get_context_data(self, *, object_list=None, **kwargs):
+		context = super().get_context_data(**kwargs)
+		tag = Tag.objects.get(slug=self.kwargs['slug'])
+		context['title'] = f'Tag: {tag.title}'
+		context['posts'] = Post.objects.filter(tags__slug=self.kwargs['slug'])
+		return context
