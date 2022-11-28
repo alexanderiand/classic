@@ -1,3 +1,4 @@
+from django.db.models import F
 from django.shortcuts import render, HttpResponse, get_object_or_404
 from django.views.generic import ListView, DetailView
 from django.http import Http404
@@ -56,9 +57,10 @@ class PostView(DetailView):
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
+		self.object.views = F('view') + 1  # every time user view
+		self.object.save()  # saves
 		try:
 			post = Post.objects.get(slug=self.kwargs['slug'])
-			# post.view += 1  # every time user view
 		except Exception:
 			raise Http404('Page not found!')
 
