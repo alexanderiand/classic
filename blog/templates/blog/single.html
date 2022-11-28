@@ -121,6 +121,13 @@
                         </div>
                     </div>
                     <div class="col-md-4">
+                        <div class="newsletter">
+                            <form action="{% url 'search' %}" method="get">
+                                <input type="search" name="s" placeholder="Search...">
+                                <input class="fa-search" type="submit" value="Search">
+                            </form>
+                        </div>
+
                         <div class="button-group">
                             <button class="row button is-checked">popular</button>
                         </div>
