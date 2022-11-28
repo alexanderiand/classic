@@ -4,10 +4,6 @@ from django.views.generic import ListView, DetailView
 from .models import Category, Post, Tag
 
 # Create your views here.
-
-def index(request):
-	return render(request, 'index.html')
-
 def single(request):
 	return render(request, 'single.html')
 
@@ -29,4 +25,20 @@ class MainView(ListView):
 		context = super().get_context_data(**kwargs)
 		context['title'] = 'Classic blog site'
 		context['latest_post'] = Post.objects.all().last()
+		return context
+
+
+class CategoryView(ListView):
+	model = Category
+	template_name = 'category.html'
+	allow_empty = False
+	paginate_by = 3
+	context_object_name = 'posts'
+
+	def get_context_data(self, *, object_list=None, **kwargs):
+		context = super().get_context_data(**kwargs)
+		current_category = Category.objects.get(slug=self.kwargs['slug'])
+		context['title'] = current_category.title
+		context['posts'] = Post.objects.filter(category__slug=self.kwargs['slug'])
+		context['latest_post'] = Post.objects.filter(category__slug=self.kwargs['slug']).last()
 		return context
