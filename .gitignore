@@ -1,6 +1,6 @@
-README.md
 db.sqlite3
 .idea
 .gitignore
-
-media
+venv/
+media/
+classic/django_cache/
