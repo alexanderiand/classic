@@ -1,0 +1,80 @@
+.post-form {
+    margin: 15px;
+    padding: 15px;
+    display: block;
+    font-size: 17px;
+    border: 3px solid mediumspringgreen;
+    border-radius: 15px;
+    background-color: lightgoldenrodyellow;
+    color: slategrey;
+    font-style: italic;
+
+}
+
+.button-reset {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: whitesmoke;
+    font-size: 16px;
+    background-color: red;
+    border-radius: 10px;
+}
+
+.button-submit {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: whitesmoke;
+    font-size: 16px;
+    background-color: lawngreen;
+    border-radius: 10px;
+
+}
+
+/*.some {*/
+/*    color: red;*/
+/*    font-size: large;*/
+/*    border: 3px solid #570808;*/
+/*}*/
+
+.form-news-div {
+    font-size: larger;
+    padding: 15px;
+    margin: 15px;
+    border: 3px solid aqua;
+    border-radius: 15px;
+    background-color: lemonchiffon;
+}
+
+.paginator_element {
+    margin-left: 3px;
+    margin-right: 3px;
+    border: 3px solid chartreuse;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: large;
+    color: lawngreen;
+    font-weight: bold;
+}
+
+.div-paginator {
+    margin: 15px;
+    display: block;
+    text-space: center;
+}
+
+.error {
+    color: red;
+    font-size: large;
+    padding: 5px;
+    font-weight: bold;
+    border: 3px solid red;
+    border-radius: 5px;
+}
+.success {
+    color: mediumspringgreen;
+    font-size: large;
+    padding: 5px;
+    font-weight: bold;
+    border: 3px solid mediumspringgreen;
+    border-radius: 5px;
+}

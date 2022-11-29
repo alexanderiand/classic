@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block sign_up %}
+
+    <section class="bg-text-area">
+        <div class="container">
+            <div class="row center-block">
+                <div class="col-md-7 center-block">
+                    <div class="form-group">
+                        <form action="{% url 'sign_in' %}" method="post">
+                            <fieldset>
+                                <legend> Sign in</legend>
+                                {% csrf_token %}
+                                {{ form.as_div }}
+                                <br>
+                                <div class="post">
+                                    <input type="reset" class="button-reset" value="Reset">
+                                    <input type="submit" class="button-submit" value="Post">
+                                </div>
+                            </fieldset>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
