@@ -1,7 +1,6 @@
 ## Classic blog site
 
 > **classic** - classic blog site
-
 >> Implemented everything that is inherent in the site:
 > - Main page, with all publications
 > - Categories of publications
