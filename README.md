@@ -1,37 +1,36 @@
-## Classic `blog site`
+## Classic blog site
 
-> **classic** - классический блог сайт, как pet project на django. 
+> **classic** - classic blog site
 
->> Реализованно всё что присуще сайту:
-> - Главная страница, со всеми публикациями
-> - Категории публикаций
-> - Просмотр отдельной статьи, статьи по категориям, просмотр статьи по тегу 
->   - Топ публикаций
->   - Облако тегов
->   - Поиск
->    - Результат поиска 
-> - Регистрация, авторизация, выход, права юзера
-> - Возможность оставлять комментарии
-> - Пагинация
-> - Админка (Django)
->   - url: `http:localhost:8000/admin`
->   - кастомизированная
->   - возможность добавления, просмотра, редактирования, и удаления категорий
->   - возможность добавления, просмотра, редактирования, и удаления публикаций
->   - возможность добавления, просмотра, редактирования, и удаления тегов
-> - Кэширование
-___
-## Развёртывание проекта
+>> Implemented everything that is inherent in the site:
+> - Main page, with all publications
+> - Categories of publications
+> - View single article, article by category, view article by tag
+> - Top publications
+> - Tag cloud
+> - Search
+> - Search result
+> - Registration, authorization, exit, user rights
+> - Pagination
+> - Admin (Django)
+> - url: `http:localhost:8000/admin`
+> - customized
+> - the ability to add, view, edit, and delete categories
+> - the ability to add, view, edit, and delete publications
+> - the ability to add, view, edit, and delete tags
+> - Caching
 
-**Установка зависимостей из requirements.txt**
+## Deploy
+
+**Installing dependencies from requirements.txt**
 
 `pip install -r requirements.txt`
 
-**Установка миграций**
+**Migrations**
 
 `python3 manage.py migrate `
 
-**Создание администратора сайта**
+**Create a site administrator**
 
 `python3 manage.py createsuperuser`
 
@@ -41,8 +40,13 @@ ___
 
 `password:  `
 
-**Запуск встроенного отладочного сервера**
+**Run server**
 
 `python3 manage.py runserver`
 
-url: `http:localhost:8000`
+## Tech Stack
+
++ Python
++ Django
++ PostgreSQL
++ html, css (bootstrap), and js
